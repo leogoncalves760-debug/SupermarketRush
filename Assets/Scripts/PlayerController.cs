@@ -3,24 +3,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-   [SerializeField] private Transform cameraTransform;
+    
+    [SerializeField] private Transform cameraTransform;
     [SerializeField] private bool faceMoveDirection;
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 5f;
-
-    private Animator animator;
-
+    
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool isGrounded;
     
-
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        //animator = GetComponentInChildren<Animator>();
     }
     
+
     public void Move(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
@@ -31,7 +29,6 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            animator.SetTrigger("Jump");
         }
     }
     
@@ -47,7 +44,7 @@ public class PlayerController : MonoBehaviour
         forward.Normalize();
         right.Normalize();
 
-        Vector3 movement =forward * moveInput.y + right * moveInput.x;
+        Vector3 movement = forward * moveInput.y + right * moveInput.x;
         movement = Vector3.ClampMagnitude(movement, 1f);
        
         Vector3 velocity = rb.linearVelocity;
@@ -56,8 +53,8 @@ public class PlayerController : MonoBehaviour
         velocity.z = movement.z * moveSpeed;
 
         rb.linearVelocity = velocity;
+
         rb.MoveRotation(Quaternion.Euler(0f, cameraTransform.eulerAngles.y, 0f));
-        
     }
 
     void OnCollisionStay(Collision collision)
