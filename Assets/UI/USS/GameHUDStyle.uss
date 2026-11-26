@@ -1,0 +1,47 @@
+#TopBar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: 90px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: rgba(20, 30, 45, 0.85);
+    border-radius: 12px;
+}
+
+#ChecklistPanel {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    width: 330px;
+    padding: 20px;
+    background-color: rgba(20, 30, 45, 0.9);
+    border-radius: 12px;
+}
+
+#ChecklistTitle {
+    font-size: 26px;
+    color: white;
+    -unity-font-style: bold;
+    margin-bottom: 12px;
+}
+
+#LivesLabel,
+#TimerLabel,
+#StarsLabel {
+    font-size: 28px;
+    color: white;
+    -unity-font-style: bold;
+}
+
+#Item1Label,
+#Item2Label,
+#Item3Label {
+    font-size: 23px;
+    color: white;
+    margin-bottom: 10px;
+}

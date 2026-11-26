@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/USS/GameHUDStyle.uss?fileID=7433441132597879392&amp;guid=e05c5dfaa1161d74a841df897dd215f3&amp;type=3"/>
+    <ui:VisualElement name="TopBar" style="flex-grow: 1;">
+        <ui:Label text="♥ ♥ ♥" name="HeartsLabel" style="color: rgb(255, 0, 0); font-size: 60px;"/>
+        <ui:Label text="Time: 60" name="TimerLabel" style="font-size: 40px;"/>
+        <ui:Label text="★ ★ ★" name="StarsVisualLabel" style="color: rgb(255, 192, 0); font-size: 60px;"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="ChecklistPanel" style="flex-grow: 1; height: 336px; bottom: 27px; left: 28px;">
+        <ui:Label text="Shoppig List:" name="ChecklistTitle" style="justify-content: flex-start; font-size: 35px;"/>
+        <ui:Label text="☐ Apple" name="Item2Label" style="font-size: 30px;"/>
+        <ui:Label text="☐ Milk" name="Item3Label" style="font-size: 30px;"/>
+        <ui:Label text="☐ Bread" name="Item1Label" style="font-size: 30px;"/>
+    </ui:VisualElement>
+</ui:UXML>

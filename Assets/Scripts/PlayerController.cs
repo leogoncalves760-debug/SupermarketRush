@@ -6,8 +6,8 @@ public class PlayerController : MonoBehaviour
     
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private bool faceMoveDirection;
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpForce;
     
     private Rigidbody rb;
     private Vector2 moveInput;
